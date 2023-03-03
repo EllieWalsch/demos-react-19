@@ -1,5 +1,8 @@
+import Header from "./components/Header";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  // text is a prop passed from parent (App) to child (Header)
+  return <Header text="Hello World" />;
 }
 
 export default App;
