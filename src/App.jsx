@@ -1,10 +1,15 @@
-import Header from "./components/Header";
 import CatCard from "./components/CatCard";
+import Header from "./components/Header";
 import catsData from "./data/cats";
 
 function App() {
   // text is a prop passed from parent (App) to child (Header)
-  return <CatCard cat={catsData[0]} />;
+  return (
+    <>
+      <Header text={"Hello Cat!"} />
+      <CatCard cat={catsData[0]} />
+    </>
+  );
 }
 
 export default App;
