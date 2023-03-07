@@ -4,10 +4,14 @@ import catsData from "./data/cats";
 
 function App() {
   // text is a prop passed from parent (App) to child (Header)
+  // <> is a fragment tag, use that instead of divs
   return (
     <>
       <Header text={"Hello Cat!"} />
-      <CatCard cat={catsData[0]} />
+
+      {catsData.map((cat) => {
+        return <CatCard cat={cat} key={cat.id} />;
+      })}
     </>
   );
 }
