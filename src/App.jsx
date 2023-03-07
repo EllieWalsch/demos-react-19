@@ -6,6 +6,7 @@ import groceriesData from "./data/groceries";
 import UserCard from "./components/UserCard";
 import userData from "./data/users";
 import NavBar from "./components/NavBar";
+import Counter from "./components/Counter";
 
 function App() {
   // text is a prop passed from parent (App) to child (Header)
@@ -29,6 +30,8 @@ function App() {
       {userData.map((user) => {
         return <UserCard user={user} key={user.id.value} />;
       })}
+
+      <Counter />
     </>
   );
 }
