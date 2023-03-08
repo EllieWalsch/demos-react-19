@@ -1,4 +1,4 @@
-export default function NavBar() {
+export default function NavBar({ handleClick }) {
   return (
     <nav className="my-8">
       <ul className="flex justify-around gap-x-8">
@@ -6,7 +6,9 @@ export default function NavBar() {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/cats">Cats</a>
+          <a href="/cats" onClick={handleClick}>
+            Cats
+          </a>
         </li>
         <li>
           <a href="/users">Users</a>
